@@ -1,7 +1,7 @@
 FROM node:21.5.0-bookworm-slim AS build
 WORKDIR /app
 COPY package*.json /app
-RUN --mount=type=secret,mode=0644,id=npmrc,target=/app/.npmrc npm ci
+RUN --mount=type=secret,mode=0600,id=npmrc,target=/app/.npmrc npm ci
 
 FROM node:21.5.0-bookworm-slim
 
