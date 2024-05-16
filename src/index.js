@@ -6,7 +6,7 @@ let app = express()
 app.get('/', function (req, res) {
   res.send( dice.roll())
 })
-/**Ejemplo de comentario */
+
 app.listen(8080, function () {
   console.log('app listening on port 8080!')
 })
